@@ -1,4 +1,4 @@
-Flask
-nltk
-stanza
-advertools
+Flask==2.3.2
+nltk==3.8.1
+stanza==1.5.0
+advertools==0.14.1
