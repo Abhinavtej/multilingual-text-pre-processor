@@ -7,6 +7,7 @@ from nltk.stem import PorterStemmer
 from nltk.corpus import wordnet
 from nltk.stem import WordNetLemmatizer
 import advertools as adv
+import os
 
 app = Flask(__name__)
 
@@ -97,4 +98,5 @@ def process():
 if __name__ == '__main__':
     nltk.download('punkt')
     nltk.download('stopwords')
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
